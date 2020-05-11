@@ -16,7 +16,13 @@ Zoom In | `Alt+k`
 Zoom Out | `Alt+j`
 Scroll | `Mousewheel`
 
-### How to install
+### Arch linux users
+Arch linux users can get my patch of ST from the AUR.
+```
+$ yay -S st-prodesquare-git
+```
+
+### Not on arch? Try installing manually
 * Clone this repo
 * Cd into the directory
 * Install
