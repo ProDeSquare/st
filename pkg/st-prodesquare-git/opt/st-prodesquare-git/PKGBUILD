@@ -1,6 +1,6 @@
 # Maintainer: Hamza Mughal <hamza@prodesquare.com>
 pkgname=st-prodesquare-git
-pkgver=0.8.3.r5.221df5b
+pkgver=0.8.3
 pkgrel=1
 epoch=
 pkgdesc="Hamza Mughal's patch of ST with Xresources support, transparency, scrolling etc"
@@ -30,12 +30,12 @@ pkgver() {
 }
 
 build() {
-  cd st
+  cd st-prodesquare
   make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
 }
 
 package() {
-  cd st
+  cd st-prodesquare
   mkdir -p ${pkgdir}/opt/${pkgname}
   cp -rf * ${pkgdir}/opt/${pkgname}
   make PREFIX=/usr DESTDIR="${pkgdir}" install
