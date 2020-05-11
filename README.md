@@ -14,11 +14,11 @@ Copy | `Alt+c`
 Paste | `Alt+v`
 Zoom In | `Alt+k`
 Zoom Out | `Alt+j`
-Scroll | `Mousewheel`, `Shift+(J, K)`
+Scroll | `Mousewheel`
 
 ### How to install
 * Clone this repo
-* Cd in the directory
+* Cd into the directory
 * Install
 
 ```
