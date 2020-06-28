@@ -8,11 +8,13 @@
 static char *font = "Jetbrains Mono:pixelsize=18:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-    "JoyPixels:pixelsize=16:antialias=true:autohint=true"
+    "Amiri:pixelsize=16:antialias=true:autohint=true",
+    "Font Awesome:pixelsize=16:antialias=true:autohint=true",
+    "JoyPixels:pixelsize=16:antialias=true:autohint=true",
     "Symbola:pixelsize=16:antialias=true:autohint=true",
 };
 
-static int borderpx = 20;
+static int borderpx = 4;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -96,37 +98,39 @@ float alphaUnfocussed = 0.85; //< alpha value used when the focus is lost
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#282828",
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
+    [0] = "#171c28", /* black   */
+    [1] = "#ef6b73", /* red     */
+    [2] = "#bae67e", /* green   */
+    [3] = "#ffd580", /* yellow  */
+    [4] = "#5ccfe6", /* blue    */
+    [5] = "#c3a6ff", /* magenta */
+    [6] = "#5ccfe6", /* cyan    */
+    [7] = "#d7dce2", /* white   */
+
+    [8]  = "#8695b7", /* black   */
+    [9]  = "#f07178", /* red     */
+    [10] = "#bae67e", /* green   */
+    [11] = "#ffd580", /* yellow  */
+    [12] = "#5ccfe6", /* blue    */
+    [13] = "#c3a6ff", /* magenta */
+    [14] = "#5ccfe6", /* cyan    */
+    [15] = "#d7dce2", /* white   */
+
 	[255] = 0,
-	"#add8e6",
-	"#555555",
-	"#282828",
-	"#ebdbb2",
+
+    [256] = "#1d2433", /* background */
+    [257] = "#a2aabc", /* foreground */
 };
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 259;
-unsigned int defaultbg = 258;
-static unsigned int defaultcs = 259;
-static unsigned int defaultrcs = 257;
+
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 256;
 
 /*
  * Default shape of cursor
