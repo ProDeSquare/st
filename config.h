@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Jetbrains Mono:pixelsize=18:antialias=true:autohint=true";
+static char *font = "Jetbrains Mono Nerd Font:pixelsize=18:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
     "Amiri:pixelsize=16:antialias=true:autohint=true",
