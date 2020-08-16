@@ -14,7 +14,7 @@ static char *font2[] = {
     "Symbola:pixelsize=16:antialias=true:autohint=true",
 };
 
-static int borderpx = 4;
+static int borderpx = 0;
 
 /*
  * What program is execed by st depends of these precedence rules:
