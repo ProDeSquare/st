@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "SF Mono Nerd Font:pixelsize=18:style=Medium:antialias=true:autohint=true";
+static int borderpx = 8;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -91,40 +91,35 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+    [0] = "#1e2127", /* black   */
+    [1] = "#e06c75", /* red     */
+    [2] = "#98c379", /* green   */
+    [3] = "#d19a66", /* yellow  */
+    [4] = "#61afef", /* blue    */
+    [5] = "#c678dd", /* magenta */
+    [6] = "#56b6c2", /* cyan    */
+    [7] = "#abb2bf", /* white   */
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+    [8]  = "#5c6370", /* black   */
+    [9]  = "#e06c75", /* red     */
+    [10] = "#98c379", /* green   */
+    [11] = "#d19a66", /* yellow  */
+    [12] = "#61afef", /* blue    */
+    [13] = "#c678dd", /* magenta */
+    [14] = "#56b6c2", /* cyan    */
+    [15] = "#abb2bf", /* white   */
 
 	[255] = 0,
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+    [256] = "#1c2023", /* background */
+    [257] = "#c7ccd1", /* foreground */
 };
 
 
@@ -132,10 +127,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 256;
 
 /*
  * Default shape of cursor
@@ -515,3 +510,4 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
+
