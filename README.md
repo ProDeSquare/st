@@ -1,6 +1,6 @@
 # Hamza Mughal's Patch Of St (Suckless Terminal)
 
-![Screenshot](https://prodesquare.com/img/projects/prodesquare-suckless-st-patch.png)
+![Screenshot](screenshot.jpg)
 st is a simple terminal implementation for X. Read more about st on [Suckless' website](http://st.suckless.org).
 
 ### Highlight on some features
