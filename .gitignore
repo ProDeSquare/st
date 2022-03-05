@@ -1,0 +1,7 @@
+patches/
+config.def.h
+config.def.h.orig
+st/
+st
+*.o
+*.orig
