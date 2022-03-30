@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "SF Mono Nerd Font:pixelsize=18:style=Medium:antialias=true:autohint=true";
+static char *font = "Jetbrains Mono Medium Nerd Font:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 8;
 
 /*
@@ -60,7 +60,7 @@ static double maxlatency = 33;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-static unsigned int blinktimeout = 0;
+static unsigned int blinktimeout = 600;
 
 /*
  * thickness of underline and bar cursors
@@ -106,7 +106,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.9;
+float alpha = 0.95;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -145,7 +145,6 @@ unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 256;
 
 /*
- * https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-q.1D81
  * Default style of cursor
  * 0: blinking block
  * 1: blinking block (default)
@@ -157,7 +156,7 @@ static unsigned int defaultrcs = 256;
  * 7: blinking st cursor
  * 8: steady st cursor
  */
-static unsigned int cursorstyle = 1;
+static unsigned int cursorstyle = 2;
 static Rune stcursor = 0x2603; /* snowman ("☃") */
 
 /*
@@ -249,16 +248,16 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ MODKEY,               XK_K,           zoom,           {.f = +1} },
-	{ MODKEY,               XK_J,           zoom,           {.f = -1} },
+	{ MODKEY,               XK_k,           zoom,           {.f = +1} },
+	{ MODKEY,               XK_j,           zoom,           {.f = -1} },
 	{ MODKEY,               XK_0,           zoomreset,      {.f =  0} },
 	{ MODKEY,               XK_c,           clipcopy,       {.i =  0} },
 	{ MODKEY,               XK_v,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+	{ TERMMOD,              XK_K,           kscrollup,      {.i = -1} },
+	{ TERMMOD,              XK_J,           kscrolldown,    {.i = -1} },
 };
 
 /*
